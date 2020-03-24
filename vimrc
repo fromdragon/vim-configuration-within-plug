@@ -5,9 +5,11 @@ let g:mapleader = "\\"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+"取消版本一致性
 set nocompatible
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"让vim支持256配色
+set t_Co=256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim plug 插件管理
@@ -45,6 +47,9 @@ set laststatus=2
 
 "line number
 set number
+
+"display / hidden line num
+nmap <C-n> :set nu!<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "file type check
@@ -226,13 +231,6 @@ endfunction
 set viminfo+=%100
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"display / hidden line num
-nmap <C-n> :set nu!<cr>
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "上下保留5行
@@ -250,13 +248,71 @@ nmap << 5<C-w><
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set lightline theme
 let g:lightline = {
-	\ 'colorscheme': 'cljiang',
-\ }
+      \   'active': {
+      \     'left': [['mode', 'paste'], ['readonly', 'absolutepath', 'modified']],
+      \     'right': [['linecount'],['lineinfo'], ['percent'], ['fileformat', 'fileencoding', 'filetype']]
+      \   },
+      \   'inactive': {
+      \     'left': [['filename']],
+      \     'right': [['lineinfo'], ['percent']]
+      \   },
+      \   'tabline': {
+      \     'left': [['tabs']],
+      \     'right': [['close']]
+      \   },
+      \   'tab': {
+      \     'active': ['tabnum', 'filename', 'modified'],
+      \     'inactive': ['tabnum', 'filename', 'modified']
+      \   },
+      \   'component': {
+      \     'mode': '%{lightline#mode()}',
+      \     'absolutepath': '%F', 'relativepath': '%f', 'filename': '%t', 'modified': '%M', 'bufnum': '%n',
+      \     'paste': '%{&paste?"PASTE":""}', 'readonly': '%R', 'charvalue': '%b', 'charvaluehex': '%B',
+      \     'spell': '%{&spell?&spelllang:""}', 'fileencoding': '%{&fenc!=#""?&fenc:&enc}', 'fileformat': '%{&ff}',
+      \     'filetype': '%{&ft!=#""?&ft:"no ft"}', 'percent': '%3p%%', 'percentwin': '%P',
+      \     'lineinfo': '%3l:%-2v', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}',
+      \      'linecount': '[%L]'
+      \   },
+      \   'component_visible_condition': {
+      \     'modified': '&modified||!&modifiable', 'readonly': '&readonly', 'paste': '&paste', 'spell': '&spell'
+      \   },
+      \   'component_function': {},
+      \   'component_function_visible_condition': {},
+      \   'component_expand': {
+      \     'tabs': 'lightline#tabs'
+      \   },
+      \   'component_type': {
+      \     'tabs': 'tabsel', 'close': 'raw'
+      \   },
+      \   'component_raw': {},
+      \   'tab_component': {},
+      \   'tab_component_function': {
+      \     'filename': 'lightline#tab#filename', 'modified': 'lightline#tab#modified',
+      \     'readonly': 'lightline#tab#readonly', 'tabnum': 'lightline#tab#tabnum'
+      \   },
+      \   'colorscheme': 'default',
+      \   'mode_map': {
+      \     'n': 'NORMAL', 'i': 'INSERT', 'R': 'REPLACE', 'v': 'VISUAL', 'V': 'V-LINE', "\<C-v>": 'V-BLOCK',
+      \     'c': 'COMMAND', 's': 'SELECT', 'S': 'S-LINE', "\<C-s>": 'S-BLOCK', 't': 'TERMINAL'
+      \   },
+      \   'separator': { 'left': '', 'right': '' },
+      \   'subseparator': { 'left': '|', 'right': '|' },
+      \   'tabline_separator': {},
+      \   'tabline_subseparator': {},
+      \   'enable': { 'statusline': 1, 'tabline': 1 },
+      \   '_mode_': {
+      \     'n': 'normal', 'i': 'insert', 'R': 'replace', 'v': 'visual', 'V': 'visual', "\<C-v>": 'visual',
+      \     'c': 'command', 's': 'select', 'S': 'select', "\<C-s>": 'select', 't': 'terminal'
+      \   },
+      \   'mode_fallback': { 'replace': 'insert', 'terminal': 'insert', 'select': 'visual' },
+      \   'palette': {},
+      \   'winwidth': winwidth(0),
+      \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set colorscheme
-"colorscheme Atelier_CaveDark 
-colorscheme cljiang 
+colorscheme Atelier_CaveDark 
+"colorscheme cljiang 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "FuzzyFinder config key map
@@ -278,6 +334,10 @@ nmap <F8> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Taglist key map
 nmap <F9> :TlistToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"buffergator
+let g:buffergator_viewport_split_policy = 'R'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
