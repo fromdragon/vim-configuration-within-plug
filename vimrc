@@ -316,8 +316,8 @@ colorscheme codedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "FuzzyFinder config key map
-nmap <F4> :FufDirWithFullCwd<CR>
-nmap <F5> :FufFileWithFullCwd<CR>
+nmap <F4> :FufDirWithFullCwd!<CR>
+nmap <F5> :FufFileWithFullCwd!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -337,7 +337,8 @@ nmap <F9> :TlistToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "buffergator
-let g:buffergator_viewport_split_policy = 'R'
+let g:buffergator_viewport_split_policy = 'B'
+let g:buffergator_display_regime = "filepath"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
