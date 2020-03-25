@@ -316,8 +316,8 @@ colorscheme codedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "FuzzyFinder config key map
-nmap <F4> :FufDirWithFullCwd!<CR>
-nmap <F5> :FufFileWithFullCwd!<CR>
+nmap <F4> :FufDirWithFullCwd<CR>
+nmap <F5> :FufFileWithFullCwd<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
