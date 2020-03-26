@@ -24,7 +24,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'preservim/nerdtree'
 Plug 'kshenoy/vim-signature'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'vim-scripts/The-NERD-Commenter'
+"Plug 'vim-scripts/The-NERD-Commenter'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 
