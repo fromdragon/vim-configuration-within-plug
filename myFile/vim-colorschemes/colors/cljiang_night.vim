@@ -96,6 +96,6 @@ hi Underlined      term=underline cterm=underline ctermfg=5 gui=underline guifg=
 hi Ignore          ctermfg=15 guifg=bg
 hi Error           term=reverse ctermfg=15 ctermbg=9 guifg=White guibg=Red
 hi Todo            term=standout ctermfg=0 ctermbg=11 guifg=Blue guibg=Yellow
-hi Function        term=bold ctermfg=63
+hi Function        term=bold ctermfg=75
 
 
