@@ -312,8 +312,9 @@ let g:lightline = {
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set colorscheme
-colorscheme codedark 
-"colorscheme cljiang 
+"colorscheme codedark 
+colorscheme codedark_fix 
+"colorscheme cljiang_day 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "FuzzyFinder config key map
@@ -335,6 +336,7 @@ nmap <F8> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Taglist key map
 nmap <F9> :TlistToggle<CR>
+let Tlist_Show_One_File=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "buffergator
