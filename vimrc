@@ -346,6 +346,10 @@ let g:buffergator_display_regime = "filepath"
 let g:buffergator_sort_regime = "mru"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
+let g:ctrlp_mruf_max = 300
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
