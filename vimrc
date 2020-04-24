@@ -24,7 +24,9 @@ Plug 'flazz/vim-colorschemes'
 Plug 'preservim/nerdtree'
 Plug 'kshenoy/vim-signature'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+"Plug 'kien/ctrlp.vim'
 "Plug 'vim-scripts/The-NERD-Commenter'
 Plug 'preservim/nerdcommenter'
 call plug#end()
@@ -230,7 +232,13 @@ endfunction
 
 
 "viminfo
-set viminfo+=%100
+"buffer 100 items
+"file mark 200 items
+"global mark is store
+"the maximum number of lines saved for each register would be 300
+"disable hlsearch
+"maximum size file is 16KB
+set viminfo=%100,'200,f1,<300,h,s16
 
 
 
@@ -325,9 +333,9 @@ nmap <F5> :FufFileWithFullCwd<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "ack config
-let g:ackprg = 'ag --nogroup --column'
-cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
+"let g:ackprg = 'ag --nogroup --column'
+"cnoreabbrev Ack Ack!
+"nnoremap <Leader>a :Ack!<Space>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -346,9 +354,14 @@ let g:buffergator_display_regime = "filepath"
 let g:buffergator_sort_regime = "mru"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMRUFiles'
-let g:ctrlp_mruf_max = 300
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlPMRUFiles'
+"let g:ctrlp_mruf_max = 300
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"fzf
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+nmap <c-p> :History<CR>
+nmap <leader>a :Buffers<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
