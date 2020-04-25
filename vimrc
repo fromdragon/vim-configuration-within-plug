@@ -359,9 +359,17 @@ let g:buffergator_sort_regime = "mru"
 "let g:ctrlp_mruf_max = 300
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "fzf
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+let g:fzf_preview_window = 'right:60%'
 nmap <c-p> :History<CR>
 nmap <leader>a :Buffers<CR>
+if !exists('g:fzf_layout')
+    autocmd! FileType fzf
+    autocmd  FileType fzf set laststatus=0 noshowmode noruler
+                \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+endif
+autocmd WinLeave * colorscheme codedark_fix
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
