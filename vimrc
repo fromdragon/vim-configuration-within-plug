@@ -359,8 +359,8 @@ let g:buffergator_sort_regime = "mru"
 "let g:ctrlp_mruf_max = 300
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "fzf
-"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
-let g:fzf_preview_window = 'right:60%'
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.7 } }
+let g:fzf_preview_window = ''
 nmap <c-p> :History<CR>
 nmap <leader>a :Buffers<CR>
 if !exists('g:fzf_layout')
