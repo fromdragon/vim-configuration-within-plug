@@ -29,6 +29,7 @@ Plug 'junegunn/fzf.vim'
 "Plug 'kien/ctrlp.vim'
 "Plug 'vim-scripts/The-NERD-Commenter'
 Plug 'preservim/nerdcommenter'
+Plug 'skywind3000/vim-terminal-help'
 call plug#end()
 
 
@@ -371,9 +372,17 @@ nmap <leader>a :Buffers<CR>
 "autocmd WinLeave * colorscheme codedark_fix
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"internal terminal config
+let g:terminal_key = '='
+let g:terminal_edit = 'drop'
+let g:terminal_height = 20
+let g:terminal_list = 0
+tmap q <c-\><c-n>
 
 
 
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
