@@ -328,7 +328,8 @@ colorscheme codedark_fix
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "FuzzyFinder config key map
-nmap <F5> :FufFileWithFullCwd!<CR>
+nmap <F4> :FufDirWithFullCwd<CR>
+nmap <F5> :FufFileWithFullCwd<CR>
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|jpg|swo|png)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
   let g:fuf_enumeratingLimit = 500
 
