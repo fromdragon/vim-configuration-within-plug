@@ -379,6 +379,7 @@ let g:terminal_key = '='
 let g:terminal_edit = 'drop'
 let g:terminal_height = 20
 let g:terminal_list = 0
+call remote_startserver('clJiang-VimServer')
 tmap q <c-\><c-n>
 
 
